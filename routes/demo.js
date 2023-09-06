@@ -21,6 +21,8 @@ router.get("/signup", function (req, res) {
     }
   }
 
+  req.session.inputData = null;
+
   res.render("signup", {inputData: sessionInputData});
 });
 
