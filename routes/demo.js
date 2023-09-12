@@ -113,9 +113,7 @@ router.post("/login", async function (req, res) {
   req.session.isAuthenticated = true
   req.session.save(() => {
     res.redirect("/admin");
-  })
-
-  
+  })  
 });
 
 router.get("/admin", function (req, res) {
