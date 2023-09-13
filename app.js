@@ -40,7 +40,7 @@ app.use( async (req, res, next) => {
     return next();
   }
   
-  const userDoc = db.getDb().collection('users').findOne({_id: user.id});
+  const userDoc = await db.getDb().collection('users').findOne({_id: user.id});
   const isAdmin = userDoc.isAdmin;
   
   res.locals.isAuth = isAuth
